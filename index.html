@@ -10,6 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome for social icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,21 +19,22 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Atlion</a>
+            <a class="navbar-brand fw-bold reveal" href="#">Atlion</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#home" data-i18n="nav_home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav_about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav_projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education" data-i18n="nav_education">Education</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#blog" data-i18n="nav_blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#video" data-i18n="nav_video">Video</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav_contact">Contact</a></li>
                 </ul>
-                <ul class="navbar-nav flex-row">
+                <ul class="navbar-nav flex-row reveal">
                     <li class="nav-item">
                         <a href="https://github.com/Atliol" class="nav-link px-2" target="_blank" aria-label="GitHub">
                             <i class="fab fa-github fa-lg"></i>
@@ -51,58 +54,110 @@
                     </li>
                     <!-- Add more social icons/links as needed -->
                 </ul>
+                <!-- Language toggle (Bootstrap dropdown) -->
+                <ul class="navbar-nav ms-2">
+                    <li class="nav-item dropdown">
+                        <button id="lang-toggle" class="nav-link btn btn-link dropdown-toggle text-white"
+                            data-bs-toggle="dropdown" aria-expanded="false" aria-label="Change language">
+                            <span id="lang-label" class="ms-1">မြန်မာ</span>
+
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><button class="dropdown-item lang-select" data-lang="mm">မြန်မာ</button></li>
+                            <li><button class="dropdown-item lang-select" data-lang="en">English</button></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="d-flex flex-column align-items-center justify-content-center text-center vh-100">
+    <section id="home"
+        class="d-flex flex-column align-items-center justify-content-center text-center vh-100 position-relative">
+        <!-- animated gradient behind hero -->
+        <div class="hero-gradient" aria-hidden="true"></div>
         <img src="./image/myokyawthu.jpg" alt="Your Name" class="rounded-circle mb-4 profile-photo" width="150"
             height="150">
-        <h1 class="display-4">Myo Kyaw Thu</h1>
-        <div class="profile-details mt-3">
-            <p><strong>Profile:</strong>Full-Stack junior developer</p>
-            <p><strong>Education:</strong>Fourth Year (Computer Science) </p>
-            <p><strong>Other Skill:</strong>HTML5 ,CSS3,Bootstrap ,PHP, MYSQL, Excel, Git, Javascrip, C++ & c#</p>
-            <p><strong>Address:</strong>QTR-9,NAL-1,Lashio</p>
+        <h1 class="display-4" data-i18n="name">Myo Kyaw Thu</h1>
+        <h3 class="typing-role mt-2"><span class="typing"
+                data-words='["Full-Stack Developer","Junior Developer","Video Editor","YouTuber"]'></span></h3>
+        <div class="profile-details mt-3 reveal">
+            <p><strong data-i18n="education_label">Education:</strong> Fourth Year (Computer Science)</p>
+            <p><strong data-i18n="address_label">Address:</strong> QTR-9, NAL-1, Lashio</p>
         </div>
-
+        <ul class="navbar-nav flex-row reveal">
+             <li class="nav-item">
+                <a href="https://www.youtube.com/@Atlionn" class="nav-link px-2" target="_blank" aria-label="youtube">
+                    <i class="fab fa-youtube fa-lg"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="https://github.com/Atliol" class="nav-link px-2" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="https://www.linkedin.com/in/myo-kyaw-thu-159052309" class="nav-link px-2" target="_blank"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="https://www.tiktok.com/@atlion?_r=1&_d=e34hi3ehabcd42&sec_uid=MS4wLjABAAAAAFH-xM-MqLoNqUSvfwdPh3fQdoXgctj3rkQl7P65OReEiNTnPmkeJHT1LFSAKkEV&share_author_id=6833045526914253829&sharer_language=en&source=h5_t&u_code=dciai0jfllefmh&timestamp=1753683052&user_id=6833045526914253829&sec_user_id=MS4wLjABAAAAAFH-xM-MqLoNqUSvfwdPh3fQdoXgctj3rkQl7P65OReEiNTnPmkeJHT1LFSAKkEV&item_author_type=1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7529013119478908690&share_link_id=70eb49d5-93ad-46b6-8be7-40b95a06b242&share_app_id=1180&ugbiz_name=ACCOUNT&social_share_type=5&enable_checksum=1"
+                    class="nav-link px-2" target="_blank" aria-label="TikTok">
+                    <i class="fab fa-tiktok fa-lg"></i>
+                </a>
+            </li>
+        </ul>
     </section>
     <!-- About Section -->
     <section id="about" class="py-5">
         <div class="container">
-            <h2 class="mb-4">About Me</h2>
-            <p> Hello,I am currently a Third-year student majoring in Computer Science, and I am excited about the
+            <h2 class="mb-4" data-i18n="about_heading">About Me</h2>
+            <p data-i18n="about_paragraph"> Hello,I am currently a Third-year student majoring in Computer Science, and
+                I am excited about the
                 prospect of applying my skills in a junior developer role. This opportunity would allow me to further
                 develop my capabilities, contribute to meaningful projects, and collaborate within an innovative team
                 environment. With a strong foundation in problem-solving and a proven track record of successfully
                 delivering projects, I am eager to make valuable contributions as a junior developer.</p>
         </div>
-    </section>
+        <!-- CV Download Button (under About) -->
+        <div class="container text-center my-3">
+            <a id="cv-download" href="./image/my-cv (1).pdf" class="btn btn-primary outline-light" target="_blank"
+                rel="noopener" aria-label="Download CV">
+                <i class="bi bi-download me-2" aria-hidden="true"></i>
+                <span id="cv-label" data-i18n="download_cv">Download CV</span>
+            </a>
+        </div>
 
+    </section>
     <!-- Projects Section -->
     <section id="projects" class="py-5">
         <div class="container">
-            <h2 class="mb-4">Projects</h2>
+            <h2 class="mb-4" data-i18n="projects_heading">Projects</h2>
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100">
+                    <div class="card h-100 reveal">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Meiktila liquor</h5>
                             <p class="card-text">I want to practice improving html , css and Javascrip.</p>
                             <img src="./image/meiktilal.png" alt="project image" class="  img-fluid mb-3">
-                            <a href="https://atliol.github.io/mei/" class="btn btn-primary mt-auto" target="_blank">Open
+                            <a href="https://atliol.github.io/mei/" class="btn btn-primary mt-auto" target="_blank"
+                                data-i18n="open_demo">Open
                                 Demo</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100">
+                    <div class="card h-100 reveal">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Useful Thing For Daily</h5>
-                            <p class="card-text">This project evaluates a website featuring a clock, calculator, puzzle
-                                game, and music player to enhance time management, boost cognitive skills, and provide a
+                            <p class="card-text">This project evaluates a website featuring a clock, calculator,
+                                puzzle
+                                game, and music player to enhance time management, boost cognitive skills, and
+                                provide a
                                 relaxing experience</p>
                             <img src="./image/pro1.png" alt="project image" class="  img-fluid mb-3">
                             <a href="https://github.com/Atliol/Useful-Things-For-Daily" class="btn btn-primary mt-auto"
@@ -112,7 +167,7 @@
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100">
+                    <div class="card h-100 reveal">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Human Resource Management System</h5>
                             <p class="card-text"></p>
@@ -124,43 +179,44 @@
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100">
+                    <div class="card h-100 reveal">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Pranking a Friend</h5>
-                            <p class="card-text">This is done to prank friends and to improve HTML, CSS, and JavaScript.
+                            <p class="card-text">This is done to prank friends and to improve HTML, CSS, and
+                                JavaScript.
                             </p>
                             <img src="./image/pkf.png" alt="project image" class="  img-fluid mb-3">
-                            <a href="https://atliol.github.io/friendcc/" class="btn btn-primary mt-auto"
-                                target="_blank">Open Demo</a>
+                            <a href="https://atliol.github.io/friendcc/" class="btn btn-primary mt-auto" target="_blank"
+                                data-i18n="open_demo">Open Demo</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100">
+                    <div class="card h-100 reveal">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">My Family</h5>
                             <p class="card-text">I want to practice improving html , css and Javascrip.</p>
                             <img src="./image/myfamily.png" alt="project image" class="  img-fluid mb-3">
-                            <a href="https://atliol.github.io/family/" class="btn btn-primary mt-auto"
-                                target="_blank">Open demo</a>
+                            <a href="https://atliol.github.io/family/" class="btn btn-primary mt-auto" target="_blank"
+                                data-i18n="open_demo">Open demo</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100">
+                    <div class="card h-100 reveal">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Digital Clock</h5>
                             <p class="card-text">I want to practice improving html , css and Javascrip.</p>
                             <img src="./image/clock.png" alt="project image" class="  img-fluid mb-3">
                             <a href="https://atliol.github.io/digitalclockmm/" class="btn btn-primary mt-auto"
-                                target="_blank">Open Demo</a>
+                                target="_blank" data-i18n="open_demo">Open Demo</a>
                         </div>
                     </div>
                 </div>
                 <form class="contact-form">
 
-                    <button onclick="window.open('https://github.com/Atliol')">More
+                    <button onclick="window.open('https://github.com/Atliol')" data-i18n="more_projects">More
                         Project</button>
                 </form>
                 <!-- Repeat this block for more projects -->
@@ -171,7 +227,7 @@
     <!-- Education Section -->
     <section id="education" class="py-5">
         <div class="container">
-            <h2 class="mb-4">Education</h2>
+            <h2 class="mb-4" data-i18n="education_heading">Education</h2>
             <ul class="list-group">
                 <li class="list-group-item">
                     <strong>Higher Education School</strong> - B.E.H.S(6)LASHIO,Myanmar(2019-2022)
@@ -214,46 +270,46 @@
     <!-- Skills Progress Bar Section -->
     <section id="skills" class="py-5">
         <div class="container">
-            <h2 class="mb-4">Skills</h2>
+            <h2 class="mb-4" data-i18n="skills_heading">Skills</h2>
             <div class="mb-3">
                 <label for="html-bar" class="label">HTML</label>
                 <div class="progress">
-                    <div id="html-bar" class="progress-bar bg-info" role="progressbar" style="width: 97%;"
+                    <div id="html-bar" class="progress-bar bg-info" role="progressbar" data-target="97"
                         aria-valuenow="97" aria-valuemin="0" aria-valuemax="100">97%</div>
                 </div>
             </div>
             <div class="mb-3">
                 <label for="css-bar" class="label">CSS</label>
                 <div class="progress">
-                    <div id="css-bar" class="progress-bar bg-success" role="progressbar" style="width: 90%;"
+                    <div id="css-bar" class="progress-bar bg-success" role="progressbar" data-target="90"
                         aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
                 </div>
             </div>
             <div class="mb-3">
                 <label for="js-bar" class="label">JavaScript</label>
                 <div class="progress">
-                    <div id="js-bar" class="progress-bar bg-warning" role="progressbar" style="width: 85%;"
+                    <div id="js-bar" class="progress-bar bg-warning" role="progressbar" data-target="85"
                         aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
                 </div>
             </div>
             <div class="mb-3">
                 <label for="csharp-bar" class="label">C#</label>
                 <div class="progress">
-                    <div id="csharp-bar" class="progress-bar bg-primary" role="progressbar" style="width: 80%;"
+                    <div id="csharp-bar" class="progress-bar bg-primary" role="progressbar" data-target="80"
                         aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
                 </div>
             </div>
             <div class="mb-3">
                 <label for="mysql-bar" class="label">MySQL</label>
                 <div class="progress">
-                    <div id="csharp-bar" class="progress-bar bg-primary" role="progressbar" style="width: 85%;"
+                    <div id="mysql-bar" class="progress-bar bg-primary" role="progressbar" data-target="85"
                         aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
                 </div>
             </div>
             <div class="mb-3">
                 <label for="php-bar" class="label">PHP</label>
                 <div class="progress">
-                    <div id="php-bar" class="progress-bar bg-danger" role="progressbar" style="width: 80%;"
+                    <div id="php-bar" class="progress-bar bg-danger" role="progressbar" data-target="80"
                         aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
                 </div>
             </div>
@@ -265,18 +321,26 @@
     <!-- Blog Section -->
     <section id="blog" class="py-5">
         <div class="container">
-            <h2 class="mb-4">Blog</h2>
-            <p>Coming soon!</p>
+            <p data-i18n="blog_p">Click the button below to go to the blog</p>
+
+        </div>
+        <div class="container text-center my-3">
+            <a id="cv-download" href="./blog.html" class="btn btn-primary outline-light" target="_blank" rel="noopener"
+                aria-label="Download CV">
+
+                <span id="cv-label" data-i18n="blog_heading">open Blog</span>
+            </a>
         </div>
     </section>
+
 
     <!-- Video Section -->
 
     <section id="video" class="py-5">
         <div class="vid">
             <div class="container text-center">
-                <h2 class="mb-4">Video</h2>
-                <p> video editing skill</p>
+                <h2 class="mb-4" data-i18n="video_heading">Video</h2>
+                <p data-i18n="video_heading"> video editing skill</p>
             </div>
             <div class="video-container">
                 <div class="video-item">
@@ -293,7 +357,20 @@
                     </video>
                     <p class="video-caption">School mini-vlog</p>
                 </div>
-
+                <div class="video-item">
+                    <video controls>
+                        <source src="./video/schoolpre.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="video-caption">School presentation</p>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="./video/vlogmp4.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="video-caption">travel mini-vlog</p>
+                </div>
 
             </div>
     </section>
@@ -301,19 +378,21 @@
     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container text-center">
-            <h2>Contact </h2>
+            <h2 data-i18n="contact_heading">Contact </h2>
 
             <form class="contact-form">
-                <p>Click the button below to provide contact information </p>
+                <p data-i18n="contact_paragraph">Click the button below to provide contact information </p>
                 <button
-                    onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSclKfYENzIw09r3N-ivIFwJbVDRCq8F1yZTyLC4JunbK5FScg/viewform?usp=dialog')">Click
+                    onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSclKfYENzIw09r3N-ivIFwJbVDRCq8F1yZTyLC4JunbK5FScg/viewform?usp=dialog')"
+                    data-i18n="contact_button">Click
                     Here</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 My Portfolio | Created by <a href="https://github.com/Atliol" target="_blank">myokyawthu</a></p>
+        <p>&copy; 2025 <span data-i18n="footer_text">My Portfolio | Created by</span> <a
+                href="https://github.com/Atliol" target="_blank">myokyawthu</a></p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>

@@ -408,7 +408,13 @@ footer a:hover {
   h2 {
     font-size: 2rem;
   }
-
+.about_paragraph{
+    font-size: 0.7rem;
+    text-align: justify;
+}
+p{
+   font-size: 0.7rem;
+}
   .navbar-brand {
     font-size: 1.2rem;
   }

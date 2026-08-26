@@ -347,6 +347,22 @@ footer a:hover {
   font-size: 1rem;
 }
 
+.skill-icon-card {
+  background: #23233a;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skill-icon-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0, 180, 216, 0.2);
+}
+
+.skill-icon {
+  font-size: 3.5rem;
+}
+
 /* Video Section */
 #videos {
   padding: 40px 20px;

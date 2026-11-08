@@ -129,7 +129,11 @@ section {
 
 }
 
-h1,
+#home h1{
+   color: white !important;
+    font-weight: 900;
+    text-shadow: 0 0 30px rgba(0,217,255,.2);
+}
 h2 {
   color: #00b4d8;
 }

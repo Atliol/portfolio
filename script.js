@@ -174,7 +174,7 @@ const translations = {
     skills_heading: 'Skills',
     blog_heading: 'Blog',
     blog_p: 'Click the button below to go to the blog',
-    blog_coming: 'Coming soon!',
+   
     video_heading: 'Video',
     contact_heading: 'Contact',
     contact_paragraph: 'Click the button below to provide contact information',
@@ -205,7 +205,7 @@ const translations = {
     certificates_heading: 'အောင်လက်မှတ်များ',
     certificates_empty: 'certificate-1.jpg ပုံကို image folder ထဲသို့ ထည့်ပါ။',
     certificate_story_heading: 'ဒီအောင်လက်မှတ်ကို ဘယ်လိုရရှိခဲ့သလဲ',
-    certificate_story_prompt: 'ကွန်ပျူတာတက္ကသိုလ်(မိတ္ထီလာ) projectပြိုင်ပွဲကျင်ပခဲ့ပါတယ်,ကျွန်တော်leaderအနေနဲ့ပါဝင်ခဲ့ပါတယ် mobileappတစ်ခုကိုဖန်တီးခဲ့ရုံတင်မကပဲ teamwok,leadership,Problem-Solvingတွေကိုလက်တွေ့ကြကြသင်ယူနိင်ခဲ့ပါတယ်',
+    certificate_story_prompt: 'ကွန်ပျူတာတက္ကသိုလ်(မိတ္ထီလာ)Projectပြပွဲ/ပြိုင်ပွဲကျင်းပခဲ့ပါတယ်,ကျွန်တော်leaderအနေနဲ့ပါဝင်ခဲ့ပါပြီးmobileappတစ်ခုကိုဖန်တီးခဲ့ရုံတင်မကပဲ teamwok,leadership,Problem-Solving Skill တွေကိုလက်တွေ့ကြကြသင်ယူနိင်ခဲ့ပါတယ်',
     skills_heading: 'ကျွမ်းကျင်မှုများ',
     blog_heading: 'ဘလော့ဂ်',
     blog_p: 'ဘလော့ဂ်သိုသွားရန် အောက်ပါbuttonကို နှိပ်ပါ။',
